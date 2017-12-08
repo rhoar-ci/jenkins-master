@@ -1,0 +1,10 @@
+# updates of plugins included in the base image
+
+kubernetes:1.1.2
+openshift-pipeline:1.0.53
+openshift-login:1.0.1
+openshift-client:1.0.3
+openshift-sync:0.9.1
+
+# new plugins not included in the base image
+ghprb:1.39.0
