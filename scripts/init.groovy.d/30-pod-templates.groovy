@@ -4,12 +4,13 @@ import org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate
 import org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud
 import org.csanchez.jenkins.plugins.kubernetes.PodTemplate
 
-def podTemplate = { name, image ->
+def podTemplate = { name, image, idleMinutes ->
     return new PodTemplate().with {
         it.name = name
         it.label = name
         it.nodeUsageMode = Node.Mode.NORMAL
         it.serviceAccount = 'jenkins'
+        it.idleMinutes = idleMinutes
         it.containers = [
                 new ContainerTemplate('jnlp', image).with {
                     it.alwaysPullImage = true
@@ -26,6 +27,6 @@ def podTemplate = { name, image ->
 def kube = Jenkins.instance.clouds.getByName('openshift') as KubernetesCloud
 
 kube.templates = [
-        podTemplate('rourka-maven', 'ladicek/rourka-jenkins-slave-maven'),
-        podTemplate('rourka-jjb', 'ladicek/rourka-jenkins-slave-jjb'),
+        podTemplate('rourka-maven', 'ladicek/rourka-jenkins-slave-maven', 15),
+        podTemplate('rourka-jjb', 'ladicek/rourka-jenkins-slave-jjb', 5),
 ]
