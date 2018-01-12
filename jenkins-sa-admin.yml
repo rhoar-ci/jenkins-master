@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: RoleBinding
+metadata:
+  name: jenkins_admin
+subjects:
+- kind: ServiceAccount
+  name: jenkins
+roleRef:
+  name: admin
