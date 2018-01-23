@@ -6,5 +6,5 @@ import jenkins.model.Jenkins
 
 def job = Jenkins.instance.createProject(FreeStyleProject.class, 'zygote')
 job.assignedLabel = new LabelAtom('rourka-jjb')
-job.scm = new GitSCM('https://github.com/Ladicek/rourka')
-job.buildersList.add(new Shell('jjb update jenkins-jobs && jjb delete zygote'))
+job.scm = new GitSCM('https://github.com/rhoar-ci/jenkins-jobs')
+job.buildersList.add(new Shell('jjb update jobs && jjb delete zygote'))
