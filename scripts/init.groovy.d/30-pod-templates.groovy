@@ -4,7 +4,9 @@ import org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate
 import org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud
 import org.csanchez.jenkins.plugins.kubernetes.PodTemplate
 
-def podTemplate = { name, image, idleMinutes ->
+def podTemplate = { name, imageStream, idleMinutes ->
+    def image = "oc get imagestream $imageStream -o jsonpath='{.status.dockerImageRepository}'".execute().text
+
     return new PodTemplate().with {
         it.name = name
         it.label = name
@@ -27,6 +29,6 @@ def podTemplate = { name, image, idleMinutes ->
 def kube = Jenkins.instance.clouds.getByName('openshift') as KubernetesCloud
 
 kube.templates = [
-        podTemplate('rourka-maven', 'ladicek/rourka-jenkins-slave-maven', 15),
-        podTemplate('rourka-jjb', 'ladicek/rourka-jenkins-slave-jjb', 5),
+        podTemplate('rourka-maven', 'jenkins-slave-maven', 15),
+        podTemplate('rourka-jjb', 'jenkins-slave-jjb', 5),
 ]
