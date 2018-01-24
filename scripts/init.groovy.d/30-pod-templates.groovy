@@ -5,7 +5,7 @@ import org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud
 import org.csanchez.jenkins.plugins.kubernetes.PodTemplate
 
 def podTemplate = { name, imageStream, idleMinutes ->
-    def image = "oc get imagestream $imageStream -o jsonpath='{.status.dockerImageRepository}'".execute().text
+    def image = "oc get imagestream $imageStream -o jsonpath={.status.dockerImageRepository}".execute().text
 
     return new PodTemplate().with {
         it.name = name
