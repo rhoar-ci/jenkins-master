@@ -14,3 +14,4 @@ def credentials = new StringCredentialsImpl(CredentialsScope.GLOBAL, data.id, da
 
 def credentialsStore = SystemCredentialsProvider.getInstance().getStore()
 credentialsStore.addCredentials(Domain.global(), credentials)
+credentialsStore.save()

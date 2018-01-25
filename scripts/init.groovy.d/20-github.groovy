@@ -11,4 +11,4 @@ def github = new GitHubServerConfig(data.credentialsId)
 github.manageHooks = data.manageHooks
 github.apiUrl = data.githubUrl
 
-GitHubPlugin.configuration().configs << github
+GitHubPlugin.configuration().configs = [github]
