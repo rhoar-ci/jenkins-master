@@ -9,7 +9,7 @@
       - comfortable editing of the Groovy scripts in an IDE.
       -->
 
-    <groupId>com.github.ladicek.rourka</groupId>
+    <groupId>com.github.rhoar-ci</groupId>
     <artifactId>jenkins-master</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
