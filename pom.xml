@@ -44,6 +44,11 @@
             <artifactId>antisamy-markup-formatter</artifactId>
             <version>1.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.codefirst.jenkins.simplethemeplugin</groupId>
+            <artifactId>simple-theme-plugin</artifactId>
+            <version>0.3</version>
+        </dependency>
     </dependencies>
 
     <repositories>

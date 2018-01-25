@@ -1,0 +1,1 @@
+- `neo-light.css`: https://tobix.github.io/jenkins-neo2-theme/

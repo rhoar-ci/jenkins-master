@@ -26,3 +26,6 @@ ghprb:1.39.0
 
 # so that job descriptions, build descriptions etc. can be HTML-formatted
 antisamy-markup-formatter:1.5
+
+# so that my eyes don't bleed when I have to look at the Jenkins UI
+simple-theme-plugin:0.3
