@@ -25,3 +25,7 @@ antisamy-markup-formatter:1.5
 
 # so that my eyes don't bleed when I have to look at the Jenkins UI
 simple-theme-plugin:0.3
+
+# to be able to perform post-build cleanup
+ws-cleanup:0.34
+postbuildscript:2.3.0
