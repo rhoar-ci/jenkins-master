@@ -29,3 +29,6 @@ simple-theme-plugin:0.3
 # to be able to perform post-build cleanup
 ws-cleanup:0.34
 postbuildscript:2.3.0
+
+# so that we can restrict how long a job can run
+build-timeout:1.19
