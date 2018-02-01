@@ -1,11 +1,11 @@
 ### updates of plugins included in the base image
 
 # latest versions of all the OpenShift-related plugins
-kubernetes:1.1.3
+kubernetes:1.1.4
 openshift-pipeline:1.0.54
 openshift-login:1.0.3
 openshift-client:1.0.5
-openshift-sync:1.0.0
+openshift-sync:1.0.2
 
 # fix for JENKINS-45470
 # can be removed when the OpenShit Jenkins image includes at least Blue Ocean 1.2.0
