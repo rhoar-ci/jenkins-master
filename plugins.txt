@@ -32,3 +32,6 @@ postbuildscript:2.3.0
 
 # so that we can restrict how long a job can run
 build-timeout:1.19
+
+# to manage environment variables in various phases of the job
+envinject:2.1.5
