@@ -3,6 +3,7 @@ import jenkins.model.Jenkins
 import org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate
 import org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud
 import org.csanchez.jenkins.plugins.kubernetes.PodTemplate
+import org.csanchez.jenkins.plugins.kubernetes.volumes.SecretVolume
 
 def podTemplate = { name, imageStream, idleMinutes ->
     def image = "oc get imagestream $imageStream -o jsonpath={.status.dockerImageRepository}".execute().text
@@ -21,6 +22,9 @@ def podTemplate = { name, imageStream, idleMinutes ->
                     it.args = '${computer.jnlpmac} ${computer.name}'
                     return it
                 }
+        ]
+        it.volumes = [
+                new SecretVolume('/my-secrets/clusters', 'clusters-secret')
         ]
         return it
     }
