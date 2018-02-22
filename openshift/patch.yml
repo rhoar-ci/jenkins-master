@@ -11,4 +11,4 @@ spec:
       - name: github-secret
         secret:
           secretName: github-secret
-          defaultMode: 420
+          defaultMode: 440
