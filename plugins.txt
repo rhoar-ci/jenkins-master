@@ -35,3 +35,6 @@ build-timeout:1.19
 
 # to manage environment variables in various phases of the job
 envinject:2.1.5
+
+# to be able to restrict which jobs can run concurrently based on job names
+build-blocker-plugin:1.7.3
