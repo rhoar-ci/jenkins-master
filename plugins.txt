@@ -5,7 +5,7 @@ kubernetes:1.3.1
 openshift-pipeline:1.0.54
 openshift-login:1.0.5
 openshift-client:1.0.7
-openshift-sync:1.0.4
+openshift-sync:1.0.5
 
 # fix for JENKINS-45470
 # can be removed when the OpenShit Jenkins image includes at least Blue Ocean 1.2.0
