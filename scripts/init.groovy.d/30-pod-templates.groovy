@@ -35,5 +35,6 @@ def kube = Jenkins.instance.clouds.getByName('openshift') as KubernetesCloud
 
 kube.templates = [
         podTemplate('maven', 'jenkins-slave-maven', 15, 5),
+        podTemplate('nodejs', 'jenkins-slave-nodejs', 15, 5),
         podTemplate('jjb', 'jenkins-slave-jjb', 5, 1),
 ]
