@@ -31,6 +31,8 @@ objects:
         ref: master
     strategy:
       type: Docker
+      dockerStrategy:
+        noCache: true
     output:
       to:
         kind: ImageStreamTag
