@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.coravy.hudson.plugins.github</groupId>
             <artifactId>github</artifactId>
-            <version>1.29.1</version>
+            <version>1.29.2</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.csanchez.jenkins.plugins</groupId>
             <artifactId>kubernetes</artifactId>
-            <version>1.7.1</version>
+            <version>1.9.2</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
