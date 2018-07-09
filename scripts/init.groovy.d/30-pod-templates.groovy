@@ -34,7 +34,7 @@ def podTemplate = { name, imageStream, idleMinutes, maxInstances ->
 def kube = Jenkins.instance.clouds.getByName('openshift') as KubernetesCloud
 
 kube.templates = [
-        podTemplate('maven', 'jenkins-slave-maven', 15, 5),
-        podTemplate('nodejs', 'jenkins-slave-nodejs', 15, 5),
-        podTemplate('jjb', 'jenkins-slave-jjb', 5, 1),
+        podTemplate('maven', 'jenkins-agent-maven', 15, 5),
+        podTemplate('nodejs', 'jenkins-agent-nodejs', 15, 5),
+        podTemplate('jjb', 'jenkins-agent-jjb', 5, 1),
 ]

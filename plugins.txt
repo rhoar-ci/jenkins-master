@@ -1,40 +1,45 @@
 ### updates of plugins included in the base image
 
 # latest versions of all the OpenShift-related plugins
-kubernetes:1.3.1
+kubernetes:1.9.2
 openshift-pipeline:1.0.54
-openshift-login:1.0.5
-openshift-client:1.0.7
-openshift-sync:1.0.5
+openshift-login:1.0.9
+openshift-client:1.0.13
+openshift-sync:1.0.20
 
 # fix for JENKINS-45470
 # can be removed when the OpenShit Jenkins image includes at least Blue Ocean 1.2.0
-blueocean:1.4.2
+blueocean:1.6.1
 
 ### new plugins not included in the base image
 
-# so that correct versions of dependencies are installed before
-# overriding this plugin by our fork, which is based on this version
-github:1.29.0
+# to run tests for master branch changes
+#
+# this plugin is actually overridden by our fork, but it still needs to be
+# installed here first, so that correct versions of dependencies are installed too
+github:1.29.2
 
-# to be able to run tests for pull requests
-ghprb:1.40.0
+# to run tests for pull requests
+#
+# this plugin is actually overridden by our fork, but it still needs to be
+# installed here first, so that correct versions of dependencies are installed too
+ghprb:1.42.0
 
-# so that job descriptions, build descriptions etc. can be HTML-formatted
+# to use HTML formatting for job descriptions, build descriptions etc.
 antisamy-markup-formatter:1.5
 
-# so that my eyes don't bleed when I have to look at the Jenkins UI
+# to avoid eye bleeding when I have to look at Jenkins UI
 simple-theme-plugin:0.4
 
-# to be able to perform post-build cleanup
+# to perform post-build cleanup
 ws-cleanup:0.34
-postbuildscript:2.5.1
+postbuildscript:2.7.0
 
-# so that we can restrict how long a job can run
+# to restrict how long a job can run
 build-timeout:1.19
 
 # to manage environment variables in various phases of the job
 envinject:2.1.5
 
-# to be able to restrict which jobs can run concurrently based on job names
+# to restrict which jobs can run concurrently based on job names
 build-blocker-plugin:1.7.3
