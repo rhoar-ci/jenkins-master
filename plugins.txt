@@ -43,3 +43,6 @@ envinject:2.1.5
 
 # to restrict which jobs can run concurrently based on job names
 build-blocker-plugin:1.7.3
+
+# to share test results from other jenkins
+build-publisher:1.22
